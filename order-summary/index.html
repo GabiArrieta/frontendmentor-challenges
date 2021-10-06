@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    :root{
+      --paleblue: hsl(225, 100%, 94%);
+      --brightblue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+    }
+    
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-size: 16px;
+      font-family: 'Red Hat Display', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .bg_mobile{
+      background: url('./images/pattern-background-desktop.svg') no-repeat center/cover;
+      height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    img{
+      max-width: 100%;
+    }
+
+    button{
+      font-family: inherit;
+    }
+
+    .btn{
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-change {
+      background: transparent;
+      color: var(--brightblue);
+      font-weight: 530;
+      text-decoration: underline;
+    }
+
+    .container{
+      display: inline-block;
+      background-color: white;
+      margin: 20px;
+      box-shadow: 3px 3px 3px hsl(224, 23%, 55%, 0.15);
+      border-radius: 15px;
+      padding-bottom: 20px;
+    }
+
+    .container img.girl_music{
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+    }
+
+    h1{
+      padding: 15px;
+      color: hsl(223, 47%, 23%)
+    }
+
+    p{
+      line-height: 23px;
+      color: hsl(224, 23%, 55%);
+      font-weight: 100;
+    }
+
+    .items{
+      margin: 30px auto 20px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--very-pale-blue);
+      width: 90%;
+      border-radius: 5px;
+      align-items: center;
+    }
+
+    .price_container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price_container img{
+      margin-right: 10px;
+    }
+    
+    .btn-primary{
+      color: white;
+      background: hsl(245, 75%, 52%);
+      font-weight: 550;
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary:hover,
+    .btn-change:hover
+    {
+      opacity: 0.8;
+    }
+    
+    .buttons-i{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--desaturated-blue);
+      font-weight: 500;
+    }
+
+    .btn-secondary:hover {
+      color: var(--brightblue);
+    }
+    
+    @media (min-width: 768px) {
+      .bg_mobile{
+      background: url('./images/pattern-background-desktop.svg') no-repeat center/cover;
+      height: 50vh;
+      }
+      .container{
+        width: 500px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="bg_mobile"></div>
+<section class="container">
+  <img src="images/illustration-hero.svg" class="girl_music"/>
+  <div>
+  <h1> Order Summary</h1>
+  <p>You can now listen to millions of songs,<br> audiobooks, and podcasts on any 
+  device <br> anywhere you like!</p>
+</div>
+
+  <div class="items">
+    <div class="price_container">
+      <img className="music_img" src="images/icon-music.svg" alt="music" />
+      <div class="price_text">
+      <h4>Annual Plan</h4>
+      <p>$59.99/year</p>
+      </div>
+    </div>
+    <button class="btn btn-change">Change</button>
+</div>
+
+<div class="buttons-i">
+  <button class="btn btn-primary ">Proceed to Payment</button>
+  <button class="btn btn-secondary">Cancel Order</button>
+</div>
+</section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://gabriela-arrieta.vercel.app/">Gabi Arrieta</a>.
+  </div>
+
+</body>
+</html>
